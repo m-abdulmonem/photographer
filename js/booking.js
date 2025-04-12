@@ -55,6 +55,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 selectable: true,
                 select: function (info) {
+                    // Ensure we have the required date info
+                    if (!info.start) {
+                        console.error('Selection missing start date:', info);
+                        return;
+                    }
+
+                    // Clone the info object and add dayEl if missing
+                    const selectionInfo = { ...info };
+                    if (!selectionInfo.dayEl) {
+                        const dateStr = selectionInfo.startStr;
+                        selectionInfo.dayEl = document.querySelector(`.fc-day[data-date="${dateStr}"]`);
+                    }
                     handleDateSelection(info);
                 },
                 datesSet: function (info) {
@@ -70,10 +82,51 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Handle date selection with proper error checking
+    // function handleDateSelection(info) {
+    //     try {
+    //         if (!info || !info.dayEl || !info.start) {
+    //             console.error('Invalid selection info:', info);
+    //             return;
+    //         }
+
+    //         // Check if weekend
+    //         if (info.start.getDay() === 0 || info.start.getDay() === 6) {
+    //             alert('Weekends are not available for booking. Please select a weekday.');
+    //             return;
+    //         }
+
+    //         // Clear previous selections safely
+    //         const prevSelected = document.querySelectorAll('.fc-day-selected');
+    //         prevSelected.forEach(day => {
+    //             try {
+    //                 day.classList.remove('fc-day-selected');
+    //             } catch (e) {
+    //                 console.error('Error clearing selection:', e);
+    //             }
+    //         });
+
+    //         // Mark new selection
+    //         info.dayEl.classList.add('fc-day-selected');
+
+    //         // Save selected date
+    //         const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    //         bookingData.date = info.start.toLocaleDateString('en-US', options);
+    //         selectedDateEl.textContent = bookingData.date;
+
+    //         // Enable next button
+    //         if (nextFromCalendarBtn) nextFromCalendarBtn.disabled = false;
+
+    //     } catch (error) {
+    //         console.error('Date selection error:', error);
+    //     }
+    // }
+
     function handleDateSelection(info) {
         try {
-            if (!info || !info.dayEl || !info.start) {
-                console.error('Invalid selection info:', info);
+            console.log('Selection info:', info); // Debug log
+
+            if (!info || !info.start) {
+                console.error('Invalid selection info - missing start date:', info);
                 return;
             }
 
@@ -81,6 +134,17 @@ document.addEventListener('DOMContentLoaded', function () {
             if (info.start.getDay() === 0 || info.start.getDay() === 6) {
                 alert('Weekends are not available for booking. Please select a weekday.');
                 return;
+            }
+
+            // Find the day element if not provided
+            let dayEl = info.dayEl;
+            if (!dayEl) {
+                const dateStr = info.startStr;
+                dayEl = document.querySelector(`.fc-day[data-date="${dateStr}"]`);
+                if (!dayEl) {
+                    console.error('Could not find day element for date:', dateStr);
+                    return;
+                }
             }
 
             // Clear previous selections safely
@@ -94,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
 
             // Mark new selection
-            info.dayEl.classList.add('fc-day-selected');
+            dayEl.classList.add('fc-day-selected');
 
             // Save selected date
             const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -108,7 +172,6 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error('Date selection error:', error);
         }
     }
-
     // Mark booked dates on calendar
     function markBookedDates() {
         try {
@@ -245,3 +308,67 @@ document.addEventListener('DOMContentLoaded', function () {
     clientSection.classList.add('hidden');
     confirmationSection.classList.add('hidden');
 });
+
+
+
+// // ... [previous code remains the same until the form submission]
+
+// // Form Submission
+// bookingForm.addEventListener('submit', function (e) {
+//     e.preventDefault();
+
+//     // Save form data
+//     bookingData.clientInfo = {
+//         name: this.elements['fullName'].value,
+//         email: this.elements['email'].value,
+//         phone: this.elements['phone'].value,
+//         eventType: this.elements['eventType'].value,
+//         location: this.elements['location'].value,
+//         specialRequests: this.elements['specialRequests'].value
+//     };
+
+//     // Generate reference
+//     bookingRefEl.textContent = 'LUX-' + Math.floor(Math.random() * 1000000);
+//     confirmationDateEl.textContent = bookingData.date;
+//     confirmationPackageEl.textContent = bookingData.package;
+
+//     // Show confirmation
+//     clientSection.classList.add('hidden');
+//     confirmationSection.classList.remove('hidden');
+//     updateSteps(4);
+
+//     // Force dark mode styles if needed
+//     updateDarkModeStyles();
+// });
+
+// // Update styles for dark mode
+// function updateDarkModeStyles() {
+//     const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+
+//     // Update booking summary in dark mode
+//     const bookingSummary = document.querySelector('.booking-summary');
+//     if (bookingSummary) {
+//         if (isDarkMode) {
+//             bookingSummary.style.backgroundColor = 'var(--card-bg)';
+//             bookingSummary.style.border = '1px solid var(--border-color)';
+//         } else {
+//             bookingSummary.style.backgroundColor = '#f9f9f9';
+//             bookingSummary.style.border = 'none';
+//         }
+//     }
+// }
+
+// // Initialize dark mode styles
+// updateDarkModeStyles();
+
+// // Watch for theme changes
+// const observer = new MutationObserver(function (mutations) {
+//     mutations.forEach(function (mutation) {
+//         if (mutation.attributeName === 'data-theme') {
+//             updateDarkModeStyles();
+//         }
+//     });
+// });
+// observer.observe(document.documentElement, { attributes: true });
+
+// // ... [rest of the code remains the same]
