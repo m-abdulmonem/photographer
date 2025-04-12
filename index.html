@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LUXFRAME | Luxury Photography</title>
+    <meta
+      name="description"
+      content="Premium photography services capturing life's most luxurious moments with artistry and precision."
+    />
+    <link rel="canonical" href="https://yourdomain.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "LUXFRAME Photography",
+        "image": "https://yourdomain.com/images/logo.jpg",
+        "description": "Premium luxury photography services",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Luxury Avenue",
+          "addressLocality": "Photo District",
+          "addressCountry": "US"
+        },
+        "telephone": "+15551234567"
+      }
+    </script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">LUX<span>FRAME</span></a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="book.html">Book</a></li>
+          <!-- Language Switcher -->
+          <li class="language-switcher">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <span>/</span>
+            <button class="lang-btn" data-lang="ar">AR</button>
+          </li>
+          <li class="theme-switcher">
+            <button
+              class="theme-btn"
+              data-theme="system"
+              title="System preference"
+            >
+              <i class="fas fa-adjust"></i>
+            </button>
+            <button class="theme-btn" data-theme="light" title="Light mode">
+              <i class="fas fa-sun"></i>
+            </button>
+            <button class="theme-btn" data-theme="dark" title="Dark mode">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+          <!-- Auth State Elements -->
+          <li class="auth-state logged-out">
+            <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+            <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+          </li>
+          <li class="nav-profile">
+            <a href="profile.html" class="profile-btn">
+              <img
+                src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg"
+                alt="Profile"
+                class="profile-avatar"
+              />
+              <span class="profile-name">Profile</span>
+            </a>
+          </li>
+          <!-- <li class="auth-state logged-in">
+            <a href="profile.html" class="profile-btn">
+              <img
+                src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg"
+                alt="Profile"
+                class="profile-img"
+              />
+              <span>Profile</span>
+            </a>
+          </li> -->
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+    <!-- Navigation -->
+    <!-- <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">LUX<span>FRAME</span></a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="book.html">Book</a></li>
+          <li>
+            <a href="profile.html" class="btn btn-outline btn-sm">Profile</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav> -->
+
+    <!-- Hero Section -->
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Capturing Life's <span>Luxurious</span> Moments</h1>
+          <p class="subtitle">
+            Professional photography services for those who appreciate the finer
+            details
+          </p>
+          <div class="vision-statement">
+            <div class="divider-line"></div>
+            <p class="vision-text">OUR VISION</p>
+            <div class="divider-line"></div>
+          </div>
+          <div class="hero-cta">
+            <a href="book.html" class="btn btn-primary btn-lg"
+              >Book a Session</a
+            >
+            <a href="packages.html" class="btn btn-outline-light btn-lg"
+              >View Packages</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <span>Scroll Down</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </section>
+    <!-- <section class="hero">
+        <div class="hero-content">
+            <h1 class="animate-slide-up">Capturing Life's <span>Luxurious</span> Moments</h1>
+            <p class="animate-slide-up delay-1">Professional photography services for those who appreciate the finer details</p>
+<a href="book.html" class="btn btn-primary btn-lg btn-icon">
+    Book a Session <i class="fas fa-calendar-alt"></i>
+</a>        </div>
+        <div class="hero-scroll">
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section> -->
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our <span>Portfolio</span></h2>
+          <p>A glimpse of our luxurious captures</p>
+        </div>
+        <div class="portfolio-grid">
+          <div class="portfolio-item">
+            <img
+              src="images/gallery1.jpg"
+              alt="Wedding Photography by LUXFRAME"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Wedding Elegance</h3>
+              <a href="#" class="btn-view">View Gallery</a>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <img
+              src="images/gallery2.jpg"
+              alt="Fashion Photography by LUXFRAME"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Fashion Glamour</h3>
+              <a href="#" class="btn-view">View Gallery</a>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <img
+              src="images/gallery3.jpg"
+              alt="Portrait Photography by LUXFRAME"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Portrait Perfection</h3>
+              <a href="#" class="btn-view">View Gallery</a>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <img
+              src="images/gallery4.jpg"
+              alt="Commercial Photography by LUXFRAME"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Commercial Excellence</h3>
+              <a href="#" class="btn-view">View Gallery</a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <a href="#" class="btn btn-secondary">View Full Portfolio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to Begin Your <span>Photography Experience?</span></h2>
+        <p>
+          Contact us today to discuss your project and how we can bring your
+          vision to life.
+        </p>
+        <div class="cta-buttons">
+          <a href="book.html" class="btn-primary">Book a Session</a>
+          <a href="#contact" class="btn-outline">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Preview Section -->
+    <section class="blog-preview-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Photography <span>Insights</span></h2>
+          <p>Latest articles from our blog</p>
+        </div>
+        <div class="blog-preview-grid">
+          <article class="blog-preview-card">
+            <a href="blog-post.html">
+              <div class="blog-preview-image">
+                <img
+                  src="https://images.pexels.com/photos/1697912/pexels-photo-1697912.jpeg"
+                  alt="10 Tips for Perfect Wedding Photos"
+                  loading="lazy"
+                />
+                <div class="blog-category">Wedding</div>
+              </div>
+              <div class="blog-preview-content">
+                <h3>10 Tips for Perfect Wedding Photos</h3>
+                <p class="blog-excerpt">
+                  Discover professional secrets to ensure your wedding photos
+                  are flawless...
+                </p>
+                <div class="blog-meta">
+                  <span class="blog-date"
+                    ><i class="far fa-calendar-alt"></i> June 15, 2023</span
+                  >
+                  <span class="blog-read-time"
+                    ><i class="far fa-clock"></i> 5 min read</span
+                  >
+                </div>
+              </div>
+            </a>
+          </article>
+          <article class="blog-preview-card">
+            <a href="blog-post.html">
+              <div class="blog-preview-image">
+                <img
+                  src="https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg"
+                  alt="Choosing the Right Photography Package"
+                  loading="lazy"
+                />
+                <div class="blog-category">Tips</div>
+              </div>
+              <div class="blog-preview-content">
+                <h3>Choosing the Right Photography Package</h3>
+                <p class="blog-excerpt">
+                  How to select the perfect photography package for your needs
+                  and budget...
+                </p>
+                <div class="blog-meta">
+                  <span class="blog-date"
+                    ><i class="far fa-calendar-alt"></i> May 28, 2023</span
+                  >
+                  <span class="blog-read-time"
+                    ><i class="far fa-clock"></i> 4 min read</span
+                  >
+                </div>
+              </div>
+            </a>
+          </article>
+          <article class="blog-preview-card">
+            <a href="blog-post.html">
+              <div class="blog-preview-image">
+                <img
+                  src="https://images.pexels.com/photos/2386310/pexels-photo-2386310.jpeg"
+                  alt="Best Locations for Portrait Photography"
+                  loading="lazy"
+                />
+                <div class="blog-category">Locations</div>
+              </div>
+              <div class="blog-preview-content">
+                <h3>Best Locations for Portrait Photography</h3>
+                <p class="blog-excerpt">
+                  Explore the most photogenic locations in the city for your
+                  next portrait session...
+                </p>
+                <div class="blog-meta">
+                  <span class="blog-date"
+                    ><i class="far fa-calendar-alt"></i> May 10, 2023</span
+                  >
+                  <span class="blog-read-time"
+                    ><i class="far fa-clock"></i> 6 min read</span
+                  >
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+        <div class="text-center">
+          <a href="blog.html" class="btn btn-secondary">View All Articles</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Replace your existing testimonials section with this -->
+    <section class="testimonials-section">
+      <div class="containr">
+        <div class="section-header">
+          <h2>Client <span>Testimonials</span></h2>
+          <p>What our clients say about our services</p>
+        </div>
+        <div class="testimonials-container">
+          <div class="testimonials-slider">
+            <div class="testimonial-card">
+              <div class="client-img">
+                <img
+                  src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg"
+                  alt="Sarah & James Wedding Clients"
+                  loading="lazy"
+                />
+              </div>
+              <div class="testimonial-content">
+                <p>
+                  "Absolutely stunning work! The attention to detail and ability
+                  to capture the essence of our wedding was beyond
+                  expectations."
+                </p>
+                <div class="client-info">
+                  <h4>Sarah & James</h4>
+                  <span>Wedding Clients</span>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="client-img">
+                <img
+                  src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg"
+                  alt="Michael Johnson CEO"
+                  loading="lazy"
+                />
+              </div>
+              <div class="testimonial-content">
+                <p>
+                  "The luxury branding photos elevated our company image
+                  tremendously. Worth every penny for the quality and
+                  professionalism."
+                </p>
+                <div class="client-info">
+                  <h4>Michael Johnson</h4>
+                  <span>CEO, Elite Brands</span>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add more testimonial cards as needed -->
+          </div>
+          <div class="slider-controls">
+            <button class="slider-prev" aria-label="Previous testimonial">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="slider-dots"></div>
+            <button class="slider-next" aria-label="Next testimonial">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-content">
+          <form class="contact-form">
+            <h2>Ready to Create <span>Something Beautiful?</span></h2>
+            <p>
+              Contact us to discuss your photography needs and how we can bring
+              your vision to life.
+            </p>
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-about">
+            <a href="index.html" class="logo">LUX<span>FRAME</span></a>
+            <p>
+              Capturing life's most luxurious moments with precision, artistry,
+              and unparalleled quality.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Pinterest"
+                ><i class="fab fa-pinterest-p"></i
+              ></a>
+              <a href="#" aria-label="Vimeo"><i class="fab fa-vimeo-v"></i></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="packages.html">Packages</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="book.html">Book a Session</a></li>
+              <li><a href="profile.html">Client Profile</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, Photo
+                District
+              </li>
+              <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+              <li><i class="fas fa-envelope"></i> info@luxframe.com</li>
+            </ul>
+          </div>
+          <div class="footer-newsletter">
+            <h3>Newsletter</h3>
+            <p>Subscribe for photography tips and special offers.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your Email" required />
+              <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 LUXFRAME Photography. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

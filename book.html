@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Your Session | LUXFRAME</title>
+    <meta
+      name="description"
+      content="Book your professional photography session with LUXFRAME. Select your date, choose a package, and complete your booking."
+    />
+    <link rel="canonical" href="https://yourdomain.com/book" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.0/main.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">LUX<span>FRAME</span></a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="book.html" class="active">Book</a></li>
+          <!-- Language Switcher -->
+          <li class="language-switcher">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <span>/</span>
+            <button class="lang-btn" data-lang="ar">AR</button>
+          </li>
+          <li class="theme-switcher">
+            <button
+              class="theme-btn"
+              data-theme="system"
+              title="System preference"
+            >
+              <i class="fas fa-adjust"></i>
+            </button>
+            <button class="theme-btn" data-theme="light" title="Light mode">
+              <i class="fas fa-sun"></i>
+            </button>
+            <button class="theme-btn" data-theme="dark" title="Dark mode">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+          <!-- Auth State Elements -->
+          <li class="auth-state logged-out">
+            <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+            <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+          </li>
+          <li class="nav-profile">
+            <a href="profile.html" class="profile-btn">
+              <img
+                src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg"
+                alt="Profile"
+                class="profile-avatar"
+              />
+              <span class="profile-name">Profile</span>
+            </a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Booking Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Book Your <span>Session</span></h1>
+        <p>Reserve your date for an unforgettable photography experience</p>
+      </div>
+    </section>
+
+    <!-- Booking Process -->
+    <section class="booking-process">
+      <div class="container">
+        <div class="booking-steps">
+          <div class="step active" data-step="1">
+            <div class="step-number">1</div>
+            <span>Select Date</span>
+          </div>
+          <div class="step" data-step="2">
+            <div class="step-number">2</div>
+            <span>Choose Package</span>
+          </div>
+          <div class="step" data-step="3">
+            <div class="step-number">3</div>
+            <span>Your Details</span>
+          </div>
+          <div class="step" data-step="4">
+            <div class="step-number">4</div>
+            <span>Confirmation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calendar Section -->
+    <!-- <section class="calendar-section booking-section">
+        <div class="container">
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <h3>Select Your Preferred Date</h3>
+                    <p>Available dates are marked in green. Click on an available date to proceed.</p>
+                </div>
+                <div id="bookingCalendar"></div>
+                <div class="calendar-legend">
+                    <div class="legend-item">
+                        <span class="available"></span>
+                        <span>Available</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="booked"></span>
+                        <span>Booked</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="selected"></span>
+                        <span>Selected</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="calendar-section">
+      <div class="container">
+        <div class="calendar-header">
+          <h3>Select Your Preferred Date</h3>
+          <p>
+            Available dates are marked in green. Click on an available date to
+            proceed.
+          </p>
+        </div>
+        <div id="bookingCalendar"></div>
+        <div class="calendar-legend">
+          <!-- Legend items -->
+        </div>
+        <!-- Add this button -->
+        <div class="text-center" style="margin-top: 30px">
+          <button id="nextFromCalendar" class="btn-primary" disabled>
+            Next: Choose Package
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Package Selection (hidden until date is selected) -->
+    <section class="package-selection hidden booking-section">
+      <div class="container">
+        <h2>Select Your <span>Package</span></h2>
+        <p>
+          Choose the perfect package for your selected date:
+          <span id="selectedDate" class="highlight"></span>
+        </p>
+
+        <div class="package-options">
+          <div class="package-card">
+            <h3>Essential Package</h3>
+            <div class="price">$1,200</div>
+            <ul class="features">
+              <li>2 hours of coverage</li>
+              <li>50 edited digital images</li>
+              <li>Online gallery</li>
+              <li>1 location</li>
+            </ul>
+            <button class="btn-outline select-package" data-package="essential">
+              Select Package
+            </button>
+          </div>
+
+          <div class="package-card featured">
+            <div class="featured-badge">Most Popular</div>
+            <h3>Premium Package</h3>
+            <div class="price">$2,500</div>
+            <ul class="features">
+              <li>4 hours of coverage</li>
+              <li>100 edited digital images</li>
+              <li>Online gallery + USB</li>
+              <li>2 locations</li>
+              <li>1 large print (16x24)</li>
+            </ul>
+            <button class="btn-primary select-package" data-package="premium">
+              Select Package
+            </button>
+          </div>
+
+          <div class="package-card">
+            <h3>Luxury Package</h3>
+            <div class="price">$4,000</div>
+            <ul class="features">
+              <li>Full day coverage (8 hours)</li>
+              <li>200+ edited digital images</li>
+              <li>Premium album</li>
+              <li>Multiple locations</li>
+              <li>3 large prints</li>
+              <li>Priority booking</li>
+            </ul>
+            <button class="btn-outline select-package" data-package="luxury">
+              Select Package
+            </button>
+          </div>
+        </div>
+
+        <div class="booking-navigation">
+          <button class="btn-outline" id="backToCalendar">
+            Back to Calendar
+          </button>
+          <button class="btn-primary" id="proceedToDetails" disabled>
+            Proceed to Details
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Details Form (hidden until package is selected) -->
+    <section class="client-details hidden booking-section">
+      <div class="container">
+        <h2>Your <span>Information</span></h2>
+        <p>Please provide your details to complete the booking</p>
+
+        <form id="bookingForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" required />
+            </div>
+            <div class="form-group">
+              <label for="eventType">Event Type</label>
+              <select id="eventType" required>
+                <option value="">Select...</option>
+                <option value="wedding">Wedding</option>
+                <option value="portrait">Portrait Session</option>
+                <option value="fashion">Fashion Shoot</option>
+                <option value="commercial">Commercial</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="location">Location/Address</label>
+            <input type="text" id="location" required />
+          </div>
+
+          <div class="form-group">
+            <label for="specialRequests">Special Requests</label>
+            <textarea id="specialRequests" rows="4"></textarea>
+          </div>
+
+          <div class="form-footer">
+            <div class="booking-summary">
+              <h4>Booking Summary</h4>
+              <p>
+                <strong>Date:</strong>
+                <span id="summaryDate" class="highlight"></span>
+              </p>
+              <p>
+                <strong>Package:</strong>
+                <span id="summaryPackage" class="highlight"></span>
+              </p>
+              <p>
+                <strong>Total:</strong>
+                <span id="summaryTotal" class="highlight"></span>
+              </p>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn-outline" id="backToPackages">
+                Back to Packages
+              </button>
+              <button type="submit" class="btn-primary">
+                Complete Booking
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Confirmation Section (hidden until form is submitted) -->
+    <section class="confirmation-section hidden booking-section">
+      <div class="container">
+        <div class="confirmation-card">
+          <div class="confirmation-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h2>Booking <span>Confirmed!</span></h2>
+          <p>
+            Thank you for choosing LUXFRAME Photography. Your session has been
+            successfully booked.
+          </p>
+
+          <div class="confirmation-details">
+            <p>
+              <strong>Booking Reference:</strong>
+              <span id="bookingRef" class="highlight">LUX-284957</span>
+            </p>
+            <p>
+              <strong>Date:</strong>
+              <span id="confirmationDate" class="highlight"></span>
+            </p>
+            <p>
+              <strong>Package:</strong>
+              <span id="confirmationPackage" class="highlight"></span>
+            </p>
+            <p>
+              We've sent all the details to your email. Please check your inbox
+              (and spam folder).
+            </p>
+          </div>
+
+          <div class="confirmation-actions">
+            <a href="profile.html" class="btn-primary">Go to Your Profile</a>
+            <a href="index.html" class="btn-outline">Back to Home</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-about">
+            <a href="index.html" class="logo">LUX<span>FRAME</span></a>
+            <p>
+              Capturing life's most luxurious moments with precision, artistry,
+              and unparalleled quality.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Pinterest"
+                ><i class="fab fa-pinterest-p"></i
+              ></a>
+              <a href="#" aria-label="Vimeo"><i class="fab fa-vimeo-v"></i></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="packages.html">Packages</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="book.html">Book a Session</a></li>
+              <li><a href="profile.html">Client Profile</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, Photo
+                District
+              </li>
+              <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+              <li><i class="fas fa-envelope"></i> info@luxframe.com</li>
+            </ul>
+          </div>
+          <div class="footer-newsletter">
+            <h3>Newsletter</h3>
+            <p>Subscribe for photography tips and special offers.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your Email" required />
+              <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 LUXFRAME Photography. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/booking.js"></script>
+  </body>
+</html>

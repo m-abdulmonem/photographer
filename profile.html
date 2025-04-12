@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Same head content as index.html -->
+</head>
+<body>
+    <!-- Navigation (same as index.html) -->
+
+    <!-- Profile Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Your <span>Profile</span></h1>
+            <p>Manage your bookings, photos, and account details</p>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+        <div class="container">
+            <div class="profile-sidebar">
+                <div class="profile-card">
+                    <div class="profile-img">
+                        <img src="images/default-avatar.jpg" alt="Profile" id="profileImage">
+                        <button class="edit-avatar"><i class="fas fa-camera"></i></button>
+                    </div>
+                    <h3 id="userName">Alex Johnson</h3>
+                    <p>Member since <span id="joinDate">January 2023</span></p>
+                    
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" id="bookingsCount">3</div>
+                            <div class="stat-label">Bookings</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" id="photosCount">245</div>
+                            <div class="stat-label">Photos</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <nav class="profile-menu">
+                    <ul>
+                        <li class="active"><a href="#dashboard"><i class="fas fa-home"></i> Dashboard</a></li>
+                        <li><a href="#bookings"><i class="fas fa-calendar-alt"></i> My Bookings</a></li>
+                        <li><a href="#gallery"><i class="fas fa-images"></i> My Gallery</a></li>
+                        <li><a href="#favorites"><i class="fas fa-heart"></i> Favorites</a></li>
+                        <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+                        <li><a href="#logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="profile-content">
+                <!-- Dashboard Tab -->
+                <div class="profile-tab active" id="dashboard">
+                    <h2>Welcome Back, <span id="greetingName">Alex</span></h2>
+                    <p>Here's what's happening with your photography sessions.</p>
+                    
+                    <div class="dashboard-cards">
+                        <div class="dash-card upcoming">
+                            <h3>Upcoming Session</h3>
+                            <div class="dash-card-content">
+                                <div class="upcoming-details">
+                                    <div class="upcoming-date">
+                                        <div class="date-day">15</div>
+                                        <div class="date-month">June</div>
+                                    </div>
+                                    <div class="upcoming-info">
+                                        <h4>Wedding Photography</h4>
+                                        <p>10:00 AM - 6:00 PM</p>
+                                        <p>Grand Luxury Hotel</p>
+                                    </div>
+                                </div>
+                                <div class="upcoming-actions">
+                                    <a href="#" class="btn-outline">View Details</a>
+                                    <a href="#" class="btn-text">Reschedule</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dash-card recent-gallery">
+                            <h3>Recent Gallery Additions</h3>
+                            <div class="dash-card-content">
+                                <div class="recent-photos">
+                                    <img src="images/recent1.jpg" alt="Recent Photo">
+                                    <img src="images/recent2.jpg" alt="Recent Photo">
+                                    <img src="images/recent3.jpg" alt="Recent Photo">
+                                    <img src="images/recent4.jpg" alt="Recent Photo">
+                                </div>
+                                <a href="#gallery" class="btn-text">View All Photos <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-actions">
+                        <a href="book.html" class="btn-primary"><i class="fas fa-plus"></i> Book New Session</a>
+                        <a href="#" class="btn-outline"><i class="fas fa-download"></i> Download All Photos</a>
+                    </div>
+                </div>
+                
+                <!-- Bookings Tab -->
+                <div class="profile-tab" id="bookings">
+                    <div class="tab-header">
+                        <h2>My <span>Bookings</span></h2>
+                        <a href="book.html" class="btn-outline"><i class="fas fa-plus"></i> New Booking</a>
+                    </div>
+                    
+                    <div class="bookings-filter">
+                        <button class="filter-btn active">All</button>
+                        <button class="filter-btn">Upcoming</button>
+                        <button class="filter-btn">Completed</button>
+                        <button class="filter-btn">Cancelled</button>
+                    </div>
+                    
+                    <div class="bookings-list">
+                        <div class="booking-item upcoming">
+                            <div class="booking-date">
+                                <div class="date-day">15</div>
+                                <div class="date-month">Jun</div>
+                            </div>
+                            <div class="booking-details">
+                                <h4>Wedding Photography - Full Day</h4>
+                                <p><i class="fas fa-clock"></i> 10:00 AM - 6:00 PM</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Grand Luxury Hotel, 123 Main St</p>
+                            </div>
+                            <div class="booking-status">
+                                <span class="status-badge upcoming">Upcoming</span>
+                                <div class="booking-actions">
+                                    <button class="btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="booking-item completed">
+                            <div class="booking-date">
+                                <div class="date-day">22</div>
+                                <div class="date-month">Apr</div>
+                            </div>
+                            <div class="booking-details">
+                                <h4>Portrait Session - Premium</h4>
+                                <p><i class="fas fa-clock"></i> 2:00 PM - 5:00 PM</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Studio Lux, 45 Art District</p>
+                            </div>
+                            <div class="booking-status">
+                                <span class="status-badge completed">Completed</span>
+                                <div class="booking-actions">
+                                    <button class="btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="booking-item completed">
+                            <div class="booking-date">
+                                <div class="date-day">10</div>
+                                <div class="date-month">Mar</div>
+                            </div>
+                            <div class="booking-details">
+                                <h4>Engagement Session</h4>
+                                <p><i class="fas fa-clock"></i> 4:00 PM - 6:00 PM</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Central Park</p>
+                            </div>
+                            <div class="booking-status">
+                                <span class="status-badge completed">Completed</span>
+                                <div class="booking-actions">
+                                    <button class="btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Tab -->
+                <div class="profile-tab" id="gallery">
+                    <div class="tab-header">
+                        <h2>My <span>Gallery</span></h2>
+                        <div class="gallery-actions">
+                            <button class="btn-outline"><i class="fas fa-download"></i> Download All</button>
+                            <button class="btn-outline"><i class="fas fa-print"></i> Order Prints</button>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-filter">
+                        <button class="filter-btn active">All Photos</button>
+                        <button class="filter-btn">Wedding</button>
+                        <button class="filter-btn">Portrait</button>
+                        <button class="filter-btn">Engagement</button>
+                    </div>
+                    
+                    <div class="photo-grid">
+                        <!-- Photos would be loaded dynamically -->
+                        <div class="photo-item">
+                            <img src="images/gallery1.jpg" alt="Photo">
+                            <div class="photo-actions">
+                                <button class="btn-favorite"><i class="fas fa-heart"></i></button>
+                                <button class="btn-download"><i class="fas fa-download"></i></button>
+                            </div>
+                        </div>
+                        <div class="photo-item">
+                            <img src="images/gallery2.jpg" alt="Photo">
+                            <div class="photo-actions">
+                                <button class="btn-favorite active"><i class="fas fa-heart"></i></button>
+                                <button class="btn-download"><i class="fas fa-download"></i></button>
+                            </div>
+                        </div>
+                        <!-- More photos... -->
+                    </div>
+                </div>
+                
+                <!-- Other tabs would follow similar structure -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+
+    <script src="js/profile.js"></script>
+</body>
+</html>

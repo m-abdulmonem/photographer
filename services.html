@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Photography Services | LUXFRAME</title>
+    <meta name="description" content="Premium photography services including weddings, portraits, fashion, commercial and real estate photography. Capture your special moments with our luxury photography.">
+    <link rel="canonical" href="https://yourdomain.com/services">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Schema.org markup for ProfessionalService -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "LUXFRAME Photography Services",
+      "description": "Premium photography services including weddings, portraits, fashion, commercial and real estate photography.",
+      "url": "https://yourdomain.com/services",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Photography Services",
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "Wedding Photography",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Essential Wedding Package"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Portrait Photography",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Premium Portrait Session"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+      <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">LUX<span>FRAME</span></a>
+        <ul class="nav-links">
+          <li><a href="index.html" >Home</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="book.html">Book</a></li>
+          <!-- Language Switcher -->
+          <li class="language-switcher">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <span>/</span>
+            <button class="lang-btn" data-lang="ar">AR</button>
+          </li>
+          <li class="theme-switcher">
+            <button
+              class="theme-btn"
+              data-theme="system"
+              title="System preference"
+            >
+              <i class="fas fa-adjust"></i>
+            </button>
+            <button class="theme-btn" data-theme="light" title="Light mode">
+              <i class="fas fa-sun"></i>
+            </button>
+            <button class="theme-btn" data-theme="dark" title="Dark mode">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+          <!-- Auth State Elements -->
+          <li class="auth-state logged-out">
+            <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+            <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+          </li>
+          <li class="nav-profile">
+            <a href="profile.html" class="profile-btn">
+              <img
+                src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg"
+                alt="Profile"
+                class="profile-avatar"
+              />
+              <span class="profile-name">Profile</span>
+            </a>
+          </li>
+          <!-- <li class="auth-state logged-in">
+            <a href="profile.html" class="profile-btn">
+              <img
+                src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg"
+                alt="Profile"
+                class="profile-img"
+              />
+              <span>Profile</span>
+            </a>
+          </li> -->
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Services Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Our <span>Services</span></h1>
+            <p>Premium photography experiences tailored to your needs</p>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="services-grid">
+        <div class="container">
+            <!-- Wedding Photography -->
+<div class="service-card">
+    <div class="service-header">
+        <div class="service-icon">
+            <i class="fas fa-ring"></i>
+        </div>
+        <h3>Wedding Photography</h3>
+    </div>
+    <p class="service-description">Capture your special day with elegance and emotion. Our wedding packages include pre-wedding shoots, full-day coverage, and luxury albums.</p>
+    <div class="service-features">
+        <ul>
+            <li><i class="fas fa-check"></i> Full-day coverage</li>
+            <li><i class="fas fa-check"></i> Multiple photographers</li>
+            <li><i class="fas fa-check"></i> Digital gallery</li>
+            <li><i class="fas fa-check"></i> Luxury albums</li>
+        </ul>
+    </div>
+    <a href="packages.html#wedding" class="service-cta">
+        View Packages <i class="fas fa-arrow-right"></i>
+    </a>
+</div>
+
+<!-- Portrait Sessions -->
+<div class="service-card">
+    <div class="service-header">
+        <div class="service-icon">
+            <i class="fas fa-user-tie"></i>
+        </div>
+        <h3>Portrait Sessions</h3>
+    </div>
+    <p class="service-description">From executive headshots to artistic personal portraits, we create images that reflect your personality and professionalism.</p>
+    <div class="service-features">
+        <ul>
+            <li><i class="fas fa-check"></i> Studio or location</li>
+            <li><i class="fas fa-check"></i> Professional lighting</li>
+            <li><i class="fas fa-check"></i> Multiple outfit changes</li>
+            <li><i class="fas fa-check"></i> Retouched images</li>
+        </ul>
+    </div>
+    <a href="packages.html#portrait" class="service-cta">
+        View Packages <i class="fas fa-arrow-right"></i>
+    </a>
+</div>
+
+<!-- Fashion Photography -->
+<div class="service-card">
+    <div class="service-header">
+        <div class="service-icon">
+            <i class="fas fa-tshirt"></i>
+        </div>
+        <h3>Fashion Photography</h3>
+    </div>
+    <p class="service-description">Showcase your designs or personal style with high-end fashion photography that stands out in the competitive industry.</p>
+    <div class="service-features">
+        <ul>
+            <li><i class="fas fa-check"></i> Model direction</li>
+            <li><i class="fas fa-check"></i> Studio or outdoor</li>
+            <li><i class="fas fa-check"></i> Professional styling</li>
+            <li><i class="fas fa-check"></i> Editorial quality</li>
+        </ul>
+    </div>
+    <a href="packages.html#fashion" class="service-cta">
+        View Packages <i class="fas fa-arrow-right"></i>
+    </a>
+</div>
+
+<!-- Commercial Photography -->
+<div class="service-card">
+    <div class="service-header">
+        <div class="service-icon">
+            <i class="fas fa-building"></i>
+        </div>
+        <h3>Commercial Photography</h3>
+    </div>
+    <p class="service-description">Elevate your brand with professional product shots, corporate events coverage, and marketing material photography.</p>
+    <div class="service-features">
+        <ul>
+            <li><i class="fas fa-check"></i> Product photography</li>
+            <li><i class="fas fa-check"></i> Corporate events</li>
+            <li><i class="fas fa-check"></i> Team portraits</li>
+            <li><i class="fas fa-check"></i> Advertising images</li>
+        </ul>
+    </div>
+    <a href="packages.html#commercial" class="service-cta">
+        View Packages <i class="fas fa-arrow-right"></i>
+    </a>
+</div>
+
+<!-- Real Estate Photography -->
+<div class="service-card">
+    <div class="service-header">
+        <div class="service-icon">
+            <i class="fas fa-home"></i>
+        </div>
+        <h3>Real Estate Photography</h3>
+    </div>
+    <p class="service-description">Showcase properties in their best light with professional real estate photography that sells homes faster and for higher prices.</p>
+    <div class="service-features">
+        <ul>
+            <li><i class="fas fa-check"></i> Interior & exterior</li>
+            <li><i class="fas fa-check"></i> Twilight shots</li>
+            <li><i class="fas fa-check"></i> Virtual tours</li>
+            <li><i class="fas fa-check"></i> Aerial photography</li>
+        </ul>
+    </div>
+    <a href="packages.html#realestate" class="service-cta">
+        View Packages <i class="fas fa-arrow-right"></i>
+    </a>
+</div>
+
+<!-- Custom Projects -->
+<div class="service-card">
+    <div class="service-header">
+        <div class="service-icon">
+            <i class="fas fa-paint-brush"></i>
+        </div>
+        <h3>Custom Projects</h3>
+    </div>
+    <p class="service-description">Have a unique photography need? We collaborate on custom projects to bring your creative vision to life.</p>
+    <div class="service-features">
+        <ul>
+            <li><i class="fas fa-check"></i> Conceptual photography</li>
+            <li><i class="fas fa-check"></i> Fine art projects</li>
+            <li><i class="fas fa-check"></i> Special events</li>
+            <li><i class="fas fa-check"></i> Personal branding</li>
+        </ul>
+    </div>
+    <a href="book.html" class="service-cta">
+        Contact Us <i class="fas fa-arrow-right"></i>
+    </a>
+</div>
+        </div>
+    </section>
+
+  <section class="process-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Our <span>Process</span></h2>
+            <p>How we create exceptional photography experiences</p>
+        </div>
+        <div class="process-steps">
+            <!-- Step 1 -->
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Consultation</h3>
+                    <p>We discuss your vision, needs, and preferences to tailor the perfect photography experience.</p>
+                    <ul class="step-details">
+                        <li>Free initial consultation</li>
+                        <li>Creative brainstorming</li>
+                        <li>Goal setting</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Planning</h3>
+                    <p>Location scouting, styling advice, and schedule coordination to ensure everything is perfect.</p>
+                    <ul class="step-details">
+                        <li>Location selection</li>
+                        <li>Wardrobe consultation</li>
+                        <li>Timeline creation</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Shoot Day</h3>
+                    <p>Professional, relaxed session where we capture stunning images with expert lighting and direction.</p>
+                    <ul class="step-details">
+                        <li>Professional equipment</li>
+                        <li>Posing guidance</li>
+                        <li>Multiple setups</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Step 4 -->
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Editing & Delivery</h3>
+                    <p>Meticulous editing process to deliver polished, high-resolution images in your preferred format.</p>
+                    <ul class="step-details">
+                        <li>Professional retouching</li>
+                        <li>Multiple revisions</li>
+                        <li>Various delivery options</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Client <span>Testimonials</span></h2>
+            <p>What our clients say about our services</p>
+        </div>
+        <div class="testimonials-container">
+            <div class="testimonials-slider">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="client-img">
+                        <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" alt="Sarah & James Wedding Clients" loading="lazy">
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Absolutely stunning work! The attention to detail and ability to capture the essence of our wedding was beyond expectations."</p>
+                        <div class="client-info">
+                            <h4>Sarah & James</h4>
+                            <span>Wedding Clients</span>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="client-img">
+                        <img src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg" alt="Michael Johnson CEO" loading="lazy">
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"The luxury branding photos elevated our company image tremendously. Worth every penny for the quality and professionalism."</p>
+                        <div class="client-info">
+                            <h4>Michael Johnson</h4>
+                            <span>CEO, Elite Brands</span>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Add more testimonials as needed -->
+            </div>
+            <div class="slider-controls">
+                <button class="slider-prev" aria-label="Previous testimonial">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="slider-dots"></div>
+                <button class="slider-next" aria-label="Next testimonial">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Begin Your <span>Photography Experience?</span></h2>
+            <p>Contact us today to discuss your project and how we can bring your vision to life.</p>
+            <div class="cta-buttons">
+                <a href="book.html" class="btn-primary">Book a Session</a>
+                <a href="contact.html" class="btn-outline">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+<!-- HTML -->
+<section class="faq-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Frequently Asked <span>Questions</span></h2>
+            <p>Get answers to common questions about our photography services</p>
+        </div>
+        
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq1">
+                    <span class="question-text">How far in advance should I book my session?</span>
+                    <span class="faq-icon">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </span>
+                </button>
+                <div id="faq1" class="faq-answer" aria-hidden="true">
+                    <p>We recommend booking at least 4-6 weeks in advance for portrait sessions and 6-12 months in advance for weddings. Popular dates during peak seasons often book up even earlier.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq2">
+                    <span class="question-text">What should I wear for my portrait session?</span>
+                    <span class="faq-icon">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </span>
+                </button>
+                <div id="faq2" class="faq-answer">
+                    <p>Choose outfits that reflect your personal style while avoiding busy patterns. Solid colors photograph well, and we recommend bringing 2-3 outfit options. We'll provide detailed wardrobe guidance during your consultation.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq3">
+                    <span class="question-text">Do you provide hair and makeup services?</span>
+                    <span class="faq-icon">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </span>
+                </button>
+                <div id="faq3" class="faq-answer">
+                    <p>Yes, we work with professional hair and makeup artists who can be added to any session. This service is included in our premium packages and can be added à la carte to other sessions.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq4">
+                    <span class="question-text">How long until I receive my photos?</span>
+                    <span class="faq-icon">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </span>
+                </button>
+                <div id="faq4" class="faq-answer">
+                    <p>Portrait sessions typically have a 2-3 week turnaround, while weddings take 4-6 weeks. You'll receive a sneak peek within 48 hours of your session. Rush processing is available for an additional fee.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq5">
+                    <span class="question-text">Do you travel for destination sessions?</span>
+                    <span class="faq-icon">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </span>
+                </button>
+                <div id="faq5" class="faq-answer">
+                    <p>Absolutely! We love destination work. Travel fees are calculated based on location and time required. Contact us for a custom quote for your destination event or session.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="faq-cta">
+            <p>Still have questions? We're happy to help!</p>
+            <a href="contact.html" class="btn btn-primary">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <a href="index.html" class="logo">LUX<span>FRAME</span></a>
+                    <p>Capturing life's most luxurious moments with precision, artistry, and unparalleled quality.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" aria-label="Vimeo"><i class="fab fa-vimeo-v"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="book.html">Book a Session</a></li>
+                        <li><a href="profile.html">Client Profile</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, Photo District</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@luxframe.com</li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for photography tips and special offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 LUXFRAME Photography. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
