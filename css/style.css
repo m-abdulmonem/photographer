@@ -5182,3 +5182,48 @@ section {
         width: 100%;
     }
 }
+/* Add-Ons Section - Dark Mode */
+[data-theme="dark"] .addons-section {
+    background-color: var(--card-bg) !important;
+}
+
+[data-theme="dark"] .addon-card {
+    background-color: var(--nav-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .addon-card h3 {
+    color: var(--dark-color);
+}
+
+[data-theme="dark"] .addon-card p {
+    color: var(--text-light);
+}
+
+[data-theme="dark"] .addon-price {
+    color: var(--primary-light) !important;
+}
+
+[data-theme="dark"] .addon-icon {
+    background-color: rgba(200, 169, 126, 0.1);
+    color: var(--primary-light);
+}
+
+[data-theme="dark"] .section-header h2,
+[data-theme="dark"] .section-header h2 span,
+[data-theme="dark"] .section-header p {
+    color: var(--dark-color);
+}
+
+/* Hover effects in dark mode */
+[data-theme="dark"] .addon-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-color: var(--primary-color);
+}
+
+[data-theme="dark"] .addon-card:hover .addon-icon {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
