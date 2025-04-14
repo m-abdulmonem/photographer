@@ -1,10 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Same head content as index.html -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LUXFRAME | Your Profile</title>
+    <meta name="description" content="Manage your photography bookings, gallery, and account settings." />
+    <link rel="canonical" href="https://yourdomain.com/profile.html" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        /* Additional styles for profile section */
+        .profile-section {
+            display: flex;
+            padding: 40px 0;
+        }
+        .profile-section .container{
+                display: flex !important
+;
+    justify-content: space-between;
+        }
+        
+        .profile-sidebar {
+    
+            width: 29%;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-right: 30px;
+            /* position: absolute; */
+        }
+        
+        .profile-card {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 20px;
+        }
+        
+        .profile-img {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .edit-avatar {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 36px;
+            height: 36px;
+            background: #4a6cf7;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .profile-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #777;
+        }
+        
+        .profile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .profile-menu li {
+            margin-bottom: 5px;
+        }
+        
+        .profile-menu a {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            color: #555;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        
+        .profile-menu a i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .profile-menu a:hover {
+            background: #f5f7ff;
+            /* color: #4a6cf7; */
+        }
+        
+        .profile-menu li.active a {
+            /* background: #4a6cf7; */
+            color: white;
+        }
+        
+        .profile-content {
+            width: 69%;
+            flex: 1;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            padding: 30px;
+        }
+        
+        .profile-tab {
+            display: none;
+        }
+        
+        .profile-tab.active {
+            display: block;
+        }
+        
+        /* Button styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            border: 1px solid transparent;
+        }
+        
+        
+        /* .btn-icon {
+            background: transparent;
+            border: none;
+            color: #777;
+            cursor: pointer;
+            padding: 5px;
+        }
+        
+        .btn-icon:hover {
+            color: #4a6cf7;
+        } */
+        
+        .btn-favorite {
+            background: transparent;
+            border: none;
+            color: #ccc;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        
+        .btn-favorite.active {
+            color: #ff4757;
+        }
+        
+        .btn-download {
+            background: transparent;
+            border: none;
+            color: #777;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        
+        .btn-download:hover {
+            color: #4a6cf7;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation (same as index.html) -->
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">LUX<span>FRAME</span></a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="book.html">Book</a></li>
+          <li class="language-switcher">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <span>/</span>
+            <button class="lang-btn" data-lang="ar">AR</button>
+          </li>
+          <li class="theme-switcher">
+            <button class="theme-btn" data-theme="system" title="System preference">
+              <i class="fas fa-adjust"></i>
+            </button>
+            <button class="theme-btn" data-theme="light" title="Light mode">
+              <i class="fas fa-sun"></i>
+            </button>
+            <button class="theme-btn" data-theme="dark" title="Dark mode">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+          <li class="auth-state logged-out">
+            <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+            <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+          </li>
+          <li class="nav-profile">
+            <a href="profile.html" class="profile-btn">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Profile" class="profile-avatar" />
+              <span class="profile-name">Profile</span>
+            </a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
 
     <!-- Profile Hero -->
     <section class="page-hero">
@@ -20,8 +256,8 @@
             <div class="profile-sidebar">
                 <div class="profile-card">
                     <div class="profile-img">
-                        <img src="images/default-avatar.jpg" alt="Profile" id="profileImage">
-                        <button class="edit-avatar"><i class="fas fa-camera"></i></button>
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop" alt="Profile" id="profileImage">
+                        <button class="edit-avatar btn"><i class="fas fa-camera"></i></button>
                     </div>
                     <h3 id="userName">Alex Johnson</h3>
                     <p>Member since <span id="joinDate">January 2023</span></p>
@@ -72,8 +308,8 @@
                                     </div>
                                 </div>
                                 <div class="upcoming-actions">
-                                    <a href="#" class="btn-outline">View Details</a>
-                                    <a href="#" class="btn-text">Reschedule</a>
+                                    <a href="#" class="btn btn-outline">View Details</a>
+                                    <a href="#" class="btn btn-text">Reschedule</a>
                                 </div>
                             </div>
                         </div>
@@ -82,19 +318,19 @@
                             <h3>Recent Gallery Additions</h3>
                             <div class="dash-card-content">
                                 <div class="recent-photos">
-                                    <img src="images/recent1.jpg" alt="Recent Photo">
-                                    <img src="images/recent2.jpg" alt="Recent Photo">
-                                    <img src="images/recent3.jpg" alt="Recent Photo">
-                                    <img src="images/recent4.jpg" alt="Recent Photo">
+                                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=200&h=200&fit=crop" alt="Recent Photo">
+                                    <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=200&h=200&fit=crop" alt="Recent Photo">
+                                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=200&h=200&fit=crop" alt="Recent Photo">
+                                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=200&h=200&fit=crop" alt="Recent Photo">
                                 </div>
-                                <a href="#gallery" class="btn-text">View All Photos <i class="fas fa-arrow-right"></i></a>
+                                <a href="#gallery" class="btn btn-text">View All Photos <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
                     
                     <div class="dashboard-actions">
-                        <a href="book.html" class="btn-primary"><i class="fas fa-plus"></i> Book New Session</a>
-                        <a href="#" class="btn-outline"><i class="fas fa-download"></i> Download All Photos</a>
+                        <a href="book.html" class="btn btn-primary"><i class="fas fa-plus"></i> Book New Session</a>
+                        <a href="#" class="btn btn-outline"><i class="fas fa-download"></i> Download All Photos</a>
                     </div>
                 </div>
                 
@@ -102,14 +338,14 @@
                 <div class="profile-tab" id="bookings">
                     <div class="tab-header">
                         <h2>My <span>Bookings</span></h2>
-                        <a href="book.html" class="btn-outline"><i class="fas fa-plus"></i> New Booking</a>
+                        <a href="book.html" class="btn btn-outline"><i class="fas fa-plus"></i> New Booking</a>
                     </div>
                     
                     <div class="bookings-filter">
-                        <button class="filter-btn active">All</button>
-                        <button class="filter-btn">Upcoming</button>
-                        <button class="filter-btn">Completed</button>
-                        <button class="filter-btn">Cancelled</button>
+                        <button class="btn filter-btn active">All</button>
+                        <button class="btn filter-btn">Upcoming</button>
+                        <button class="btn filter-btn">Completed</button>
+                        <button class="btn filter-btn">Cancelled</button>
                     </div>
                     
                     <div class="bookings-list">
@@ -126,7 +362,7 @@
                             <div class="booking-status">
                                 <span class="status-badge upcoming">Upcoming</span>
                                 <div class="booking-actions">
-                                    <button class="btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                                    <button class="btn btn-icon"><i class="fas fa-ellipsis-v"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -144,25 +380,7 @@
                             <div class="booking-status">
                                 <span class="status-badge completed">Completed</span>
                                 <div class="booking-actions">
-                                    <button class="btn-icon"><i class="fas fa-ellipsis-v"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="booking-item completed">
-                            <div class="booking-date">
-                                <div class="date-day">10</div>
-                                <div class="date-month">Mar</div>
-                            </div>
-                            <div class="booking-details">
-                                <h4>Engagement Session</h4>
-                                <p><i class="fas fa-clock"></i> 4:00 PM - 6:00 PM</p>
-                                <p><i class="fas fa-map-marker-alt"></i> Central Park</p>
-                            </div>
-                            <div class="booking-status">
-                                <span class="status-badge completed">Completed</span>
-                                <div class="booking-actions">
-                                    <button class="btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                                    <button class="btn btn-icon"><i class="fas fa-ellipsis-v"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -174,45 +392,143 @@
                     <div class="tab-header">
                         <h2>My <span>Gallery</span></h2>
                         <div class="gallery-actions">
-                            <button class="btn-outline"><i class="fas fa-download"></i> Download All</button>
-                            <button class="btn-outline"><i class="fas fa-print"></i> Order Prints</button>
+                            <button class="btn btn-outline"><i class="fas fa-download"></i> Download All</button>
+                            <button class="btn btn-outline"><i class="fas fa-print"></i> Order Prints</button>
                         </div>
                     </div>
                     
                     <div class="gallery-filter">
-                        <button class="filter-btn active">All Photos</button>
-                        <button class="filter-btn">Wedding</button>
-                        <button class="filter-btn">Portrait</button>
-                        <button class="filter-btn">Engagement</button>
+                        <button class="btn filter-btn active">All Photos</button>
+                        <button class="btn filter-btn">Wedding</button>
+                        <button class="btn filter-btn">Portrait</button>
+                        <button class="btn filter-btn">Engagement</button>
                     </div>
                     
                     <div class="photo-grid">
-                        <!-- Photos would be loaded dynamically -->
                         <div class="photo-item">
-                            <img src="images/gallery1.jpg" alt="Photo">
+                            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=300&h=300&fit=crop" alt="Photo">
                             <div class="photo-actions">
-                                <button class="btn-favorite"><i class="fas fa-heart"></i></button>
-                                <button class="btn-download"><i class="fas fa-download"></i></button>
+                                <button class="btn btn-favorite"><i class="fas fa-heart"></i></button>
+                                <button class="btn btn-download"><i class="fas fa-download"></i></button>
                             </div>
                         </div>
                         <div class="photo-item">
-                            <img src="images/gallery2.jpg" alt="Photo">
+                            <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=300&h=300&fit=crop" alt="Photo">
                             <div class="photo-actions">
-                                <button class="btn-favorite active"><i class="fas fa-heart"></i></button>
-                                <button class="btn-download"><i class="fas fa-download"></i></button>
+                                <button class="btn btn-favorite active"><i class="fas fa-heart"></i></button>
+                                <button class="btn btn-download"><i class="fas fa-download"></i></button>
                             </div>
                         </div>
-                        <!-- More photos... -->
+                        <div class="photo-item">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=300&h=300&fit=crop" alt="Photo">
+                            <div class="photo-actions">
+                                <button class="btn btn-favorite"><i class="fas fa-heart"></i></button>
+                                <button class="btn btn-download"><i class="fas fa-download"></i></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Other tabs would follow similar structure -->
             </div>
         </div>
     </section>
 
-    <!-- Footer (same as index.html) -->
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-about">
+            <a href="index.html" class="logo">LUX<span>FRAME</span></a>
+            <p>
+              Capturing life's most luxurious moments with precision, artistry,
+              and unparalleled quality.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+              <a href="#" aria-label="Vimeo"><i class="fab fa-vimeo-v"></i></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="packages.html">Packages</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="book.html">Book a Session</a></li>
+              <li><a href="profile.html">Client Profile</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <ul>
+              <li><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, Photo District</li>
+              <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+              <li><i class="fas fa-envelope"></i> info@luxframe.com</li>
+            </ul>
+          </div>
+          <div class="footer-newsletter">
+            <h3>Newsletter</h3>
+            <p>Subscribe for photography tips and special offers.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your Email" required />
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 LUXFRAME Photography. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="js/profile.js"></script>
+    <script>
+        // Tab switching functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all tab links and content areas
+            const tabLinks = document.querySelectorAll('.profile-menu a');
+            const tabContents = document.querySelectorAll('.profile-tab');
+            
+            // Add click event listeners to each tab link
+            tabLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Get the target tab ID from the href attribute
+                    const targetTabId = this.getAttribute('href').substring(1);
+                    
+                    // Hide all tab contents
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    
+                    // Show the target tab content
+                    document.getElementById(targetTabId).classList.add('active');
+                    
+                    // Update active state in the menu
+                    tabLinks.forEach(link => {
+                        link.parentElement.classList.remove('active');
+                    });
+                    this.parentElement.classList.add('active');
+                });
+            });
+            
+            // Avatar edit button functionality
+            const editAvatarBtn = document.querySelector('.edit-avatar');
+            if (editAvatarBtn) {
+                editAvatarBtn.addEventListener('click', function() {
+                    // In a real implementation, this would open a file picker
+                    alert('Avatar edit functionality would go here');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
