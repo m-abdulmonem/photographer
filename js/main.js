@@ -155,10 +155,10 @@ document.addEventListener('DOMContentLoaded', function() {
             datesSet: function(info) {
                 // Mark booked dates (in a real app, this would come from an API)
                 const bookedDates = [
-                    '2023-06-10',
-                    '2023-06-15',
-                    '2023-06-20',
-                    '2023-06-25'
+                    '2025-06-10',
+                    '2025-06-15',
+                    '2025-06-20',
+                    '2025-06-25'
                 ];
                 
                 document.querySelectorAll('.fc-day').forEach(day => {
@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('.confirmation-section').classList.remove('hidden');
             
             // Set confirmation details
-            document.querySelector('#bookingRef').textContent = 'LUX-' + Math.floor(Math.random() * 1000000);
+            document.querySelector('#bookingRef').textContent = 'ELESAWY-' + Math.floor(Math.random() * 1000000);
             document.querySelector('#confirmationDate').textContent = document.querySelector('#summaryDate').textContent;
             document.querySelector('#confirmationPackage').textContent = document.querySelector('#summaryPackage').textContent;
         });

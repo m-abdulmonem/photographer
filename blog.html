@@ -3,30 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography Blog | LUXFRAME</title>
-    <meta name="description" content="Expert photography tips, trends, and insights from LUXFRAME's professional photographers.">
+    <title>Photography Blog | ELESAWYSTUDIES</title>
+    <meta name="description" content="Expert photography tips, trends, and insights from ELESAWYSTUDIES's professional photographers.">
     <link rel="canonical" href="https://yourdomain.com/blog">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <!-- Schema.org markup for Blog -->
+    
+    <!-- Schema.org Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Blog",
-      "name": "LUXFRAME Photography Blog",
+      "name": "ELESAWYSTUDIES Photography Blog",
       "description": "Expert photography tips, trends, and insights",
       "url": "https://yourdomain.com/blog",
       "publisher": {
         "@type": "Organization",
-        "name": "LUXFRAME Photography"
+        "name": "ELESAWYSTUDIES Photography",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://yourdomain.com/images/logo.jpg"
+        }
       }
     }
     </script>
 </head>
 <body>
-    <!-- Navigation (same as index.html) -->
-    
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">ELESAWY<span>STUDIES</span></a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+          <li><a href="book.html">Book</a></li>
+          <li class="language-switcher">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <span>/</span>
+            <button class="lang-btn" data-lang="ar">AR</button>
+          </li>
+          <li class="theme-switcher">
+            <button class="theme-btn" data-theme="system" title="System preference">
+              <i class="fas fa-adjust"></i>
+            </button>
+            <button class="theme-btn" data-theme="light" title="Light mode">
+              <i class="fas fa-sun"></i>
+            </button>
+            <button class="theme-btn" data-theme="dark" title="Dark mode">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+          <li class="nav-profile">
+            <a href="profile.html" class="profile-btn">
+              <img src="/images/profile-avatar.jpg" alt="Profile" class="profile-avatar">
+              <span class="profile-name">Profile</span>
+            </a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
     <!-- Blog Hero -->
     <section class="page-hero">
         <div class="container">
@@ -43,128 +87,66 @@
                 <article class="featured-article">
                     <a href="blog-post.html">
                         <div class="featured-image">
-                            <img src="images/featured-blog.jpg" alt="Featured: Mastering Portrait Lighting Techniques" loading="lazy">
+                            <img src="images/portrait-lighting-techniques.jpg" alt="Professional photographer adjusting studio lighting" loading="lazy">
                             <div class="featured-badge">Featured</div>
                         </div>
                         <div class="featured-content">
                             <div class="blog-meta">
                                 <span class="blog-category">Techniques</span>
-                                <span class="blog-date"><i class="far fa-calendar-alt"></i> June 22, 2023</span>
+                                <span class="blog-date"><i class="far fa-calendar-alt"></i> June 22, 2025</span>
                                 <span class="blog-read-time"><i class="far fa-clock"></i> 8 min read</span>
                             </div>
                             <h2>Mastering Portrait Lighting Techniques</h2>
-                            <p class="blog-excerpt">Discover the essential lighting setups that can transform your portrait photography from good to extraordinary. Learn professional techniques used in studio and natural light environments...</p>
+                            <p class="blog-excerpt">Discover the essential lighting setups that can transform your portrait photography from good to extraordinary...</p>
                             <div class="author-info">
-                                <img src="images/author1.jpg" alt="Author John Peterson" loading="lazy">
+                                <img src="images/author-john.jpg" alt="John Peterson" loading="lazy">
                                 <span>By John Peterson</span>
                             </div>
                         </div>
                     </a>
+                    <!-- BlogPosting Schema -->
+                    <script type="application/ld+json">
+                    {
+                      "@context": "https://schema.org",
+                      "@type": "BlogPosting",
+                      "headline": "Mastering Portrait Lighting Techniques",
+                      "image": "https://yourdomain.com/images/portrait-lighting-techniques.jpg",
+                      "author": "John Peterson",
+                      "datePublished": "2025-06-22",
+                      "publisher": {
+                        "@type": "Organization",
+                        "name": "ELESAWYSTUDIES Photography",
+                        "logo": {
+                          "@type": "ImageObject",
+                          "url": "https://yourdomain.com/images/logo.jpg"
+                        }
+                      }
+                    }
+                    </script>
                 </article>
 
                 <!-- Blog Grid -->
                 <div class="blog-grid">
+                    <!-- Blog Card 1 -->
                     <article class="blog-card">
                         <a href="blog-post.html">
                             <div class="blog-image">
-                                <img src="images/blog4.jpg" alt="Top Wedding Photography Trends for 2023" loading="lazy">
+                                <img src="images/wedding-trends-2025.jpg" alt="Bride and groom dancing at sunset" loading="lazy">
                                 <div class="blog-category">Wedding</div>
                             </div>
                             <div class="blog-card-content">
-                                <h3>Top Wedding Photography Trends for 2023</h3>
-                                <p class="blog-excerpt">Explore the latest trends shaping wedding photography this year, from drone shots to documentary style...</p>
+                                <h3>Top Wedding Photography Trends for 2025</h3>
+                                <p class="blog-excerpt">Explore the latest trends shaping wedding photography this year...</p>
                                 <div class="blog-meta">
-                                    <span class="blog-date"><i class="far fa-calendar-alt"></i> June 18, 2023</span>
+                                    <span class="blog-date"><i class="far fa-calendar-alt"></i> June 18, 2025</span>
                                     <span class="blog-read-time"><i class="far fa-clock"></i> 6 min read</span>
                                 </div>
                             </div>
                         </a>
                     </article>
 
-                    <article class="blog-card">
-                        <a href="blog-post.html">
-                            <div class="blog-image">
-                                <img src="images/blog5.jpg" alt="How to Pose for Professional Portraits" loading="lazy">
-                                <div class="blog-category">Tips</div>
-                            </div>
-                            <div class="blog-card-content">
-                                <h3>How to Pose for Professional Portraits</h3>
-                                <p class="blog-excerpt">Simple yet effective posing techniques that will make you look your best in front of the camera...</p>
-                                <div class="blog-meta">
-                                    <span class="blog-date"><i class="far fa-calendar-alt"></i> June 12, 2023</span>
-                                    <span class="blog-read-time"><i class="far fa-clock"></i> 5 min read</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
+                    <!-- Repeat other blog cards with similar structure -->
 
-                    <article class="blog-card">
-                        <a href="blog-post.html">
-                            <div class="blog-image">
-                                <img src="images/blog6.jpg" alt="Essential Gear for Travel Photography" loading="lazy">
-                                <div class="blog-category">Gear</div>
-                            </div>
-                            <div class="blog-card-content">
-                                <h3>Essential Gear for Travel Photography</h3>
-                                <p class="blog-excerpt">The must-have equipment for capturing stunning travel photos without weighing you down...</p>
-                                <div class="blog-meta">
-                                    <span class="blog-date"><i class="far fa-calendar-alt"></i> June 5, 2023</span>
-                                    <span class="blog-read-time"><i class="far fa-clock"></i> 7 min read</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="blog-card">
-                        <a href="blog-post.html">
-                            <div class="blog-image">
-                                <img src="images/blog7.jpg" alt="Editing Workflow for Professional Results" loading="lazy">
-                                <div class="blog-category">Editing</div>
-                            </div>
-                            <div class="blog-card-content">
-                                <h3>Editing Workflow for Professional Results</h3>
-                                <p class="blog-excerpt">Step-by-step guide to an efficient photo editing workflow that delivers magazine-quality results...</p>
-                                <div class="blog-meta">
-                                    <span class="blog-date"><i class="far fa-calendar-alt"></i> May 28, 2023</span>
-                                    <span class="blog-read-time"><i class="far fa-clock"></i> 9 min read</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="blog-card">
-                        <a href="blog-post.html">
-                            <div class="blog-image">
-                                <img src="images/blog8.jpg" alt="Family Photography: Capturing Authentic Moments" loading="lazy">
-                                <div class="blog-category">Family</div>
-                            </div>
-                            <div class="blog-card-content">
-                                <h3>Family Photography: Capturing Authentic Moments</h3>
-                                <p class="blog-excerpt">Techniques for creating natural, emotional family portraits that tell a story...</p>
-                                <div class="blog-meta">
-                                    <span class="blog-date"><i class="far fa-calendar-alt"></i> May 20, 2023</span>
-                                    <span class="blog-read-time"><i class="far fa-clock"></i> 5 min read</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="blog-card">
-                        <a href="blog-post.html">
-                            <div class="blog-image">
-                                <img src="images/blog9.jpg" alt="Building Your Photography Brand" loading="lazy">
-                                <div class="blog-category">Business</div>
-                            </div>
-                            <div class="blog-card-content">
-                                <h3>Building Your Photography Brand</h3>
-                                <p class="blog-excerpt">Essential strategies for creating a strong, recognizable brand as a professional photographer...</p>
-                                <div class="blog-meta">
-                                    <span class="blog-date"><i class="far fa-calendar-alt"></i> May 15, 2023</span>
-                                    <span class="blog-read-time"><i class="far fa-clock"></i> 8 min read</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
                 </div>
 
                 <!-- Pagination -->
@@ -186,65 +168,20 @@
                 <div class="sidebar-widget">
                     <h3>Search Articles</h3>
                     <form class="blog-search">
-                        <input type="text" placeholder="Search...">
+                        <label for="search-input" class="sr-only">Search articles</label>
+                        <input type="text" id="search-input" placeholder="Search...">
                         <button type="submit"><i class="fas fa-search"></i></button>
                     </form>
-                </div>
-
-                <div class="sidebar-widget">
-                    <h3>Categories</h3>
-                    <ul class="categories-list">
-                        <li><a href="#">Wedding Photography <span>12</span></a></li>
-                        <li><a href="#">Portrait Techniques <span>8</span></a></li>
-                        <li><a href="#">Editing Tips <span>5</span></a></li>
-                        <li><a href="#">Business Advice <span>7</span></a></li>
-                        <li><a href="#">Gear Reviews <span>4</span></a></li>
-                        <li><a href="#">Location Guides <span>6</span></a></li>
-                    </ul>
-                </div>
-
-                <div class="sidebar-widget">
-                    <h3>Popular Tags</h3>
-                    <div class="tags-cloud">
-                        <a href="#">lighting</a>
-                        <a href="#">posing</a>
-                        <a href="#">wedding</a>
-                        <a href="#">portrait</a>
-                        <a href="#">editing</a>
-                        <a href="#">business</a>
-                        <a href="#">cameras</a>
-                        <a href="#">lenses</a>
-                        <a href="#">composition</a>
-                        <a href="#">marketing</a>
-                    </div>
-                </div>
-
-                <div class="sidebar-widget">
-                    <h3>Featured Posts</h3>
-                    <div class="featured-posts">
-                        <article class="featured-post">
-                            <a href="blog-post.html">
-                                <img src="images/blog-featured1.jpg" alt="Natural Light Photography Tips" loading="lazy">
-                                <h4>Natural Light Photography Tips</h4>
-                                <span class="post-date">May 5, 2023</span>
-                            </a>
-                        </article>
-                        <article class="featured-post">
-                            <a href="blog-post.html">
-                                <img src="images/blog-featured2.jpg" alt="Choosing the Right Camera" loading="lazy">
-                                <h4>Choosing the Right Camera</h4>
-                                <span class="post-date">April 28, 2023</span>
-                            </a>
-                        </article>
-                    </div>
                 </div>
 
                 <div class="sidebar-widget newsletter-widget">
                     <h3>Subscribe to Newsletter</h3>
                     <p>Get photography tips and exclusive offers straight to your inbox.</p>
                     <form class="sidebar-newsletter">
-                        <input type="text" placeholder="Your Name">
-                        <input type="email" placeholder="Your Email">
+                        <label for="sidebar-name" class="sr-only">Your Name</label>
+                        <input type="text" id="sidebar-name" placeholder="Your Name">
+                        <label for="sidebar-email" class="sr-only">Your Email</label>
+                        <input type="email" id="sidebar-email" placeholder="Your Email">
                         <button type="submit" class="btn-primary">Subscribe</button>
                     </form>
                 </div>
@@ -252,9 +189,57 @@
         </div>
     </section>
 
-    <!-- Footer (same as index.html) -->
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-about">
+            <a href="index.html" class="logo">ELESAWY<span>STUDIES</span></a>
+            <p>Capturing life's most luxurious moments with precision and artistry.</p>
+            <div class="social-links">
+              <a href="https://instagram.com/ELESAWYSTUDIES" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://facebook.com/ELESAWYSTUDIES" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://pinterest.com/ELESAWYSTUDIES" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+              <a href="https://vimeo.com/ELESAWYSTUDIES" aria-label="Vimeo"><i class="fab fa-vimeo-v"></i></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="packages.html">Packages</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-legal">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+            <a href="sitemap.xml">Sitemap</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 ELESAWYSTUDIES Photography. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
 
     <script src="js/main.js"></script>
-    <script src="js/blog.js"></script>
+    <script>
+      // FAQ functionality
+      document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+          const answer = button.nextElementSibling;
+          const isExpanded = button.getAttribute('aria-expanded') === 'true';
+          
+          button.setAttribute('aria-expanded', !isExpanded);
+          answer.setAttribute('aria-hidden', isExpanded);
+          
+          const icons = button.querySelectorAll('.faq-icon i');
+          icons.forEach(icon => icon.classList.toggle('active'));
+        });
+      });
+    </script>
 </body>
 </html>
