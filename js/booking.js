@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Mark booked dates on calendar
     function markBookedDates() {
         try {
-            const bookedDates = ['2023-06-10', '2023-06-15', '2023-06-20', '2023-06-25'];
+            const bookedDates = ['2025-06-10', '2025-06-15', '2025-06-20', '2025-06-25'];
             const days = document.querySelectorAll('.fc-day');
 
             days.forEach(day => {
@@ -276,7 +276,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         // Generate reference
-        bookingRefEl.textContent = 'LUX-' + Math.floor(Math.random() * 1000000);
+        bookingRefEl.textContent = 'ELESAWY-' + Math.floor(Math.random() * 1000000);
         confirmationDateEl.textContent = bookingData.date;
         confirmationPackageEl.textContent = bookingData.package;
 
@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', function () {
 //     };
 
 //     // Generate reference
-//     bookingRefEl.textContent = 'LUX-' + Math.floor(Math.random() * 1000000);
+//     bookingRefEl.textContent = 'ELESAWY-' + Math.floor(Math.random() * 1000000);
 //     confirmationDateEl.textContent = bookingData.date;
 //     confirmationPackageEl.textContent = bookingData.package;
 

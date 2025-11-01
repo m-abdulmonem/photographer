@@ -1571,21 +1571,21 @@ font-size: 1.4rem;
     font-weight: 600;
 }
 
-.fc-day-available .fc-daygrid-day-frame {
+.fc-day-available .fc-daygrid-day-STUDIES {
     background-color: rgba(76, 175, 80, 0.1);
     cursor: pointer;
 }
 
-.fc-day-booked .fc-daygrid-day-frame {
+.fc-day-booked .fc-daygrid-day-STUDIES {
     background-color: rgba(244, 67, 54, 0.1);
     cursor: not-allowed;
 }
 
-.fc-day-selected .fc-daygrid-day-frame {
+.fc-day-selected .fc-daygrid-day-STUDIES {
     background-color: rgba(139, 107, 74, 0.2);
 }
 
-.fc-day-available:hover .fc-daygrid-day-frame {
+.fc-day-available:hover .fc-daygrid-day-STUDIES {
     background-color: rgba(76, 175, 80, 0.2);
 }
 
