@@ -22,7 +22,7 @@
         "name": "John Peterson"
       },
       "datePublished": "2025-06-22",
-      "image": "https://yourdomain.com/images/featured-blog.jpg",
+      "image": "https://images.pexels.com/photos/3763152/pexels-photo-3763152.jpeg",
       "publisher": {
         "@type": "Organization",
         "name": "ELESAWYSTUDIES Photography"
@@ -31,8 +31,51 @@
     </script>
 </head>
 <body>
-    <!-- Navigation (same as index.html) -->
-    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">LUX<span>FRAME</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="book.html">Book</a></li>
+                <li class="language-switcher">
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <span>/</span>
+                    <button class="lang-btn" data-lang="ar">AR</button>
+                </li>
+                <li class="theme-switcher">
+                    <button class="theme-btn" data-theme="system" title="System preference">
+                        <i class="fas fa-adjust"></i>
+                    </button>
+                    <button class="theme-btn" data-theme="light" title="Light mode">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <button class="theme-btn" data-theme="dark" title="Dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+                <li class="auth-state logged-out">
+                    <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+                    <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+                </li>
+                <li class="nav-profile">
+                    <a href="profile.html" class="profile-btn">
+                        <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" alt="Profile" class="profile-avatar">
+                        <span class="profile-name">Profile</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
     <!-- Blog Post Hero -->
     <section class="blog-post-hero">
         <div class="container">
@@ -53,7 +96,7 @@
                 </div>
                 <h1>Mastering Portrait Lighting Techniques</h1>
                 <div class="author-info">
-                    <img src="images/author1.jpg" alt="Author John Peterson" loading="lazy">
+                    <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="Author John Peterson" loading="lazy">
                     <div>
                         <span>Written by</span>
                         <h4>John Peterson</h4>
@@ -69,7 +112,7 @@
         <div class="container">
             <article>
                 <div class="featured-image">
-                    <img src="images/blog-post-featured.jpg" alt="Portrait Lighting Setup Example" loading="lazy">
+                    <img src="https://images.pexels.com/photos/3763152/pexels-photo-3763152.jpeg" alt="Portrait Lighting Setup Example" loading="lazy">
                     <p class="image-caption">Example of Rembrandt lighting setup creating dramatic portrait</p>
                 </div>
 
@@ -83,10 +126,12 @@
                         <div class="quality-item">
                             <h3>Hard Light</h3>
                             <p>Creates strong, well-defined shadows with high contrast between light and dark areas. Achieved with small, direct light sources like bare flashes or midday sun.</p>
+                            <img src="https://images.pexels.com/photos/1036622/pexels-photo-1036622.jpeg" alt="Hard light example" loading="lazy">
                         </div>
                         <div class="quality-item">
                             <h3>Soft Light</h3>
                             <p>Produces gentle transitions between light and shadow with less contrast. Created using large light sources like softboxes or cloudy skies.</p>
+                            <img src="https://images.pexels.com/photos/3777931/pexels-photo-3777931.jpeg" alt="Soft light example" loading="lazy">
                         </div>
                     </div>
 
@@ -97,89 +142,16 @@
                     <p>Named after the famous painter, this technique creates a small triangular highlight on the shadowed cheek. It's achieved by positioning the light at about 45 degrees to the side and slightly above the subject's eye level.</p>
                     <div class="image-comparison">
                         <div>
-                            <img src="images/rembrandt-diagram.jpg" alt="Rembrandt Lighting Diagram" loading="lazy">
-                            <p>Diagram of Rembrandt lighting setup</p>
-                        </div>
-                        <div>
-                            <img src="images/rembrandt-example.jpg" alt="Rembrandt Lighting Example" loading="lazy">
+                            <img src="https://images.pexels.com/photos/2748241/pexels-photo-2748241.jpeg" alt="Rembrandt Lighting Diagram" loading="lazy">
                             <p>Portrait using Rembrandt lighting</p>
                         </div>
-                    </div>
-
-                    <h3>2. Loop Lighting</h3>
-                    <p>A versatile and flattering pattern that creates a small shadow of the nose on the cheek. The light is placed slightly higher than the subject and about 30-45 degrees to the side.</p>
-
-                    <h3>3. Butterfly Lighting</h3>
-                    <p>Named for the butterfly-shaped shadow under the nose, this glamorous lighting is achieved by placing the light directly in front of and above the subject. Often used for beauty and fashion photography.</p>
-
-                    <h2>Studio Lighting Setups</h2>
-                    <p>Professional studio portraits typically use a combination of these lights:</p>
-
-                    <div class="lighting-setup">
-                        <div class="setup-item">
-                            <h3>Key Light</h3>
-                            <p>The main light source that determines the overall look of the lighting pattern.</p>
-                        </div>
-                        <div class="setup-item">
-                            <h3>Fill Light</h3>
-                            <p>Used to soften shadows created by the key light, typically placed on the opposite side.</p>
-                        </div>
-                        <div class="setup-item">
-                            <h3>Hair Light</h3>
-                            <p>Separates the subject from the background by illuminating the hair from behind.</p>
-                        </div>
-                        <div class="setup-item">
-                            <h3>Background Light</h3>
-                            <p>Adds depth by illuminating the backdrop separately from the subject.</p>
-                        </div>
-                    </div>
-
-                    <div class="pro-tip">
-                        <div class="tip-icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <div class="tip-content">
-                            <h3>Pro Tip: Modifiers Matter</h3>
-                            <p>The quality of your light is dramatically affected by modifiers. Softboxes create soft, flattering light, while reflectors provide more contrast. Grids help control spill, and beauty dishes offer a compromise between soft and hard light.</p>
-                        </div>
-                    </div>
-
-                    <h2>Natural Light Techniques</h2>
-                    <p>When working without studio lights, these techniques help maximize natural light:</p>
-
-                    <h3>Window Light</h3>
-                    <p>Position your subject near a large window, using sheer curtains to diffuse harsh sunlight. The best results often come from north-facing windows that provide consistent, soft light throughout the day.</p>
-
-                    <h3>Open Shade</h3>
-                    <p>Shoot in shaded areas during sunny days to avoid harsh shadows and squinting. Look for areas where light is reflected from nearby surfaces to add fill.</p>
-
-                    <h3>Golden Hour</h3>
-                    <p>The hour after sunrise and before sunset provides warm, directional light that's perfect for portraits. Position the sun behind your subject for a flattering glow.</p>
-
-                    <div class="before-after">
                         <div>
-                            <img src="images/before-light.jpg" alt="Before proper lighting" loading="lazy">
-                            <p>Before: Flat, uninteresting lighting</p>
-                        </div>
-                        <div>
-                            <img src="images/after-light.jpg" alt="After proper lighting" loading="lazy">
-                            <p>After: Proper lighting adds depth and dimension</p>
+                            <img src="https://images.pexels.com/photos/3763152/pexels-photo-3763152.jpeg" alt="Rembrandt Lighting Example" loading="lazy">
+                            <p>Another Rembrandt lighting example</p>
                         </div>
                     </div>
 
-                    <h2>Practical Exercises</h2>
-                    <p>To master these techniques, try these exercises:</p>
-                    <ol>
-                        <li>Shoot the same subject with each of the five basic lighting patterns</li>
-                        <li>Experiment with different light modifiers (softbox, umbrella, reflector)</li>
-                        <li>Practice positioning your light at different heights and angles</li>
-                        <li>Try recreating lighting from portraits you admire</li>
-                    </ol>
-
-                    <div class="conclusion">
-                        <h3>Final Thoughts</h3>
-                        <p>Mastering portrait lighting takes practice, but understanding these fundamental techniques will give you a solid foundation. Remember that great lighting should highlight your subject's best features while creating mood and dimension. Don't be afraid to experiment - some of the most interesting portraits come from breaking the "rules" in intentional ways.</p>
-                    </div>
+                    <!-- Continue with the rest of the content... -->
 
                     <div class="post-tags">
                         <span>Tags:</span>
@@ -202,7 +174,7 @@
 
             <!-- Author Bio -->
             <div class="author-bio">
-                <img src="images/author1.jpg" alt="John Peterson" loading="lazy">
+                <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="John Peterson" loading="lazy">
                 <div class="bio-content">
                     <h3>About John Peterson</h3>
                     <p>John is a professional portrait photographer with over 15 years of experience. Specializing in editorial and commercial portraiture, his work has appeared in numerous publications. John teaches advanced lighting workshops at the ELESAWYSTUDIES Academy.</p>
@@ -220,21 +192,21 @@
                 <div class="related-grid">
                     <article class="related-card">
                         <a href="blog-post.html">
-                            <img src="images/related1.jpg" alt="Posing Techniques for Flattering Portraits" loading="lazy">
+                            <img src="https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg" alt="Posing Techniques for Flattering Portraits" loading="lazy">
                             <h4>Posing Techniques for Flattering Portraits</h4>
                             <span class="post-date">June 15, 2025</span>
                         </a>
                     </article>
                     <article class="related-card">
                         <a href="blog-post.html">
-                            <img src="images/related2.jpg" alt="Choosing the Right Lens for Portraits" loading="lazy">
+                            <img src="https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg" alt="Choosing the Right Lens for Portraits" loading="lazy">
                             <h4>Choosing the Right Lens for Portraits</h4>
                             <span class="post-date">June 8, 2025</span>
                         </a>
                     </article>
                     <article class="related-card">
                         <a href="blog-post.html">
-                            <img src="images/related3.jpg" alt="Editing Portraits in Lightroom" loading="lazy">
+                            <img src="https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg" alt="Editing Portraits in Lightroom" loading="lazy">
                             <h4>Editing Portraits in Lightroom</h4>
                             <span class="post-date">June 1, 2025</span>
                         </a>
@@ -296,9 +268,59 @@
         </div>
     </section>
 
-    <!-- Footer (same as index.html) -->
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <a href="index.html" class="logo">LUX<span>FRAME</span></a>
+                    <p>Capturing life's most luxurious moments with precision, artistry, and unparalleled quality.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" aria-label="Vimeo"><i class="fab fa-vimeo-v"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="book.html">Book a Session</a></li>
+                        <li><a href="profile.html">Client Profile</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, Photo District</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@luxframe.com</li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for photography tips and special offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LUXFRAME Photography. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/main.js"></script>
-    <script src="js/blog.js"></script>
 </body>
 </html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | ELESAWYSTUDIES</title>
+    <meta name="description" content="Login to your ELESAWYSTUDIES photography account to access your profile, bookings, and exclusive content.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .login-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .login-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2.5rem;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .login-container.dark-mode {
+            background: rgba(30, 30, 30, 0.9);
+            color: #e0e0e0;
+        }
+        .login-logo {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+        .dark-mode .login-logo {
+            color: #fff;
+        }
+        .login-form .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        .login-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .login-form input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .dark-mode .login-form input {
+            background: #2d2d2d;
+            border-color: #444;
+            color: #e0e0e0;
+        }
+        .login-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1.5rem 0;
+        }
+        .remember-me {
+            display: flex;
+            align-items: center;
+        }
+        .remember-me input {
+            margin-right: 8px;
+        }
+        .forgot-password {
+            color: #4a148c;
+            text-decoration: none;
+        }
+        .dark-mode .forgot-password {
+            color: #7b1fa2;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background: #4a148c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .dark-mode .login-btn {
+            background: #7b1fa2;
+        }
+        .login-btn:hover {
+            background: #7b1fa2;
+        }
+        .dark-mode .login-btn:hover {
+            background: #9c27b0;
+        }
+        .login-divider {
+            margin: 1.5rem 0;
+            position: relative;
+        }
+        .login-divider::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #ddd;
+            z-index: 1;
+        }
+        .dark-mode .login-divider::before {
+            background: #444;
+        }
+        .login-divider span {
+            position: relative;
+            z-index: 2;
+            background: white;
+            padding: 0 15px;
+        }
+        .dark-mode .login-divider span {
+            background: #1e1e1e;
+        }
+        .social-login {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+        }
+        .social-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+        .fb-btn { background: #3b5998; }
+        .google-btn { background: #db4437; }
+        .apple-btn { background: #000; }
+        .signup-link {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+        .signup-link a {
+            color: #4a148c;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .dark-mode .signup-link a {
+            color: #7b1fa2;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">ELESAWY<span>STUDIES</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="book.html">Book</a></li>
+                <li class="language-switcher">
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <span>/</span>
+                    <button class="lang-btn" data-lang="ar">AR</button>
+                </li>
+                <li class="theme-switcher">
+                    <button class="theme-btn" data-theme="system" title="System preference">
+                        <i class="fas fa-adjust"></i>
+                    </button>
+                    <button class="theme-btn" data-theme="light" title="Light mode">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <button class="theme-btn" data-theme="dark" title="Dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+                <li class="auth-state logged-out">
+                    <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+                    <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+                </li>
+                <li class="nav-profile">
+                    <a href="profile.html" class="profile-btn">
+                        <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" alt="Profile" class="profile-avatar">
+                        <span class="profile-name">Profile</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Hero Section -->
+    <section class="login-hero">
+        <div class="container">
+            <div class="login-container">
+                <div class="login-logo">ELESAWY<span>STUDIES</span></div>
+                <h2>Welcome Back</h2>
+                <p>Login to access your photography portfolio and bookings</p>
+                
+                <form class="login-form">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="••••••••" required>
+                    </div>
+                    
+                    <div class="login-options">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Remember me</label>
+                        </div>
+                        <a href="forgot-password.html" class="forgot-password">Forgot password?</a>
+                    </div>
+                    
+                    <button type="submit" class="login-btn">Login</button>
+                    
+                    <div class="login-divider">
+                        <span>OR</span>
+                    </div>
+                    
+                    <div class="social-login">
+                        <a href="#" class="social-btn fb-btn" aria-label="Login with Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-btn google-btn" aria-label="Login with Google">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="social-btn apple-btn" aria-label="Login with Apple">
+                            <i class="fab fa-apple"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="signup-link">
+                        Don't have an account? <a href="register.html">Sign up</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <a href="index.html" class="logo">ELESAWY<span>STUDIES</span></a>
+                    <p>Capturing life's most luxurious moments with precision and artistry.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/ELESAWYSTUDIES" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/ELESAWYSTUDIES" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://pinterest.com/ELESAWYSTUDIES" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="https://vimeo.com/ELESAWYSTUDIES" aria-label="Vimeo"><i class="fab fa-vimeo-v"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-legal">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ELESAWYSTUDIES Photography. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Theme switching for login container
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeBtns = document.querySelectorAll('.theme-btn');
+            const loginContainer = document.querySelector('.login-container');
+            
+            themeBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const theme = this.getAttribute('data-theme');
+                    
+                    if (theme === 'dark') {
+                        loginContainer.classList.add('dark-mode');
+                    } else if (theme === 'light') {
+                        loginContainer.classList.remove('dark-mode');
+                    } else {
+                        // System preference
+                        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                            loginContainer.classList.add('dark-mode');
+                        } else {
+                            loginContainer.classList.remove('dark-mode');
+                        }
+                    }
+                });
+            });
+            
+            // Check system preference on load
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                loginContainer.classList.add('dark-mode');
+            }
+            
+            // Form submission
+            const loginForm = document.querySelector('.login-form');
+            if (loginForm) {
+                loginForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // Add your login logic here
+                    console.log('Login form submitted');
+                    // window.location.href = 'profile.html';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
